@@ -952,7 +952,7 @@ svg {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--secondary-text-color);
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   border: 12px;
 }
 
@@ -1103,20 +1103,24 @@ svg {
 }
 
 .modal-form-btn {
-  background: var(--focus-color);
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-    border-radius: 4px;
-    width: 200px;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-    color: #FFFFFF;
-    margin: 0 auto;
-    display: block;
+  display: block;
+  margin: 0 auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--back-color);
+  background-color: var(--accent-color);
+
+  box-shadow: var(--modal-form-btn-shadow);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 56px;
+  border: none;
+
   transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
 
