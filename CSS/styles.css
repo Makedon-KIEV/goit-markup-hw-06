@@ -36,6 +36,12 @@
   --modal-form-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -928,7 +934,14 @@ svg {
   cursor: pointer;
   padding: 0;
 }
-
+.close-bth:hover,
+.close-bth:focus{
+  fill: var(--accent-color);
+}
+.close-vector:hover,
+.close-vector:focus{
+  fill: var(--accent-color);
+}
 .close-vector {
   width: 11px;
   height: 11px;
@@ -1013,7 +1026,7 @@ svg {
   left: 12px;
   height: 18px;
   width: 18px;
-  fill: var(--primary-color);
+  fill: var(--text-color);
   transition: fill 250ms var(--cubic);
 }
 
@@ -1058,7 +1071,7 @@ svg {
 }
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-image: url('../images/check.svg');
+  background-image: url('./images/check.svg');
   border: none;
   background-position: center;
   background-repeat: no-repeat;
