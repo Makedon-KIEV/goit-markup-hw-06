@@ -34,6 +34,8 @@
   --hero-button-hover-color: #188ce8;
   --modal-button-border: rgba(0, 0, 0, 0.1);
   --modal-form-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --form-border-color: rgba(33, 33, 33, 0.2);
+  --textaria-text-color: rgba(117, 117, 117, 0.5);
 }
 
 *,
@@ -894,6 +896,7 @@ svg {
 /*========================END GALLERY ====================*/
 /*========================Backdrop ====================*/
 
+/*=============Modal=============*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -917,6 +920,7 @@ svg {
   border-radius: 4px;
 
   transform: translate(-50%, -50%);
+  padding: 40px;
 }
 
 .close-btn {
@@ -934,18 +938,17 @@ svg {
   cursor: pointer;
   padding: 0;
 }
-.close-bth:hover,
-.close-bth:focus{
-  fill: var(--accent-color);
-}
-.close-vector:hover,
-.close-vector:focus{
-  fill: var(--accent-color);
-}
+
 .close-vector {
   width: 11px;
   height: 11px;
-  fill: var(--black-black);
+  fill: var(--back-color);
+  transition: fill 250ms var(--cubic);
+}
+
+.close-btn:focus .close-vector,
+.close-btn:hover .close-vector {
+  fill: var(--accent-color);
 }
 
 .is-hidden {
@@ -953,23 +956,18 @@ svg {
   visibility: hidden;
   pointer-events: none;
 }
-.modal-form{
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-}
 
 .modal-form-field {
   display: block;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: var(--secondary-text-color);
-  /* margin-bottom: 10px; */
-  border: 12px;
+
+  color: var(--gray-type);
+  margin-bottom: 10px;
 }
 
- .indent {
+.indent {
   margin-bottom: 20px;
 }
 
@@ -984,14 +982,6 @@ svg {
   margin-bottom: 12px;
 }
 
-.modal-form-field-paragraph{
-  margin-bottom: 4px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: var(--gray-type);
-}
 .modal-form-input {
   width: 100%;
   height: 40px;
@@ -1013,10 +1003,7 @@ svg {
 }
 
 .modal-form-input-wrapper {
-  margin-bottom: 10px;
-  display: block;
   position: relative;
-  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .form-input-icon {
@@ -1039,12 +1026,11 @@ svg {
   width: 100%;
   height: 120px;
   margin-top: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--form-border-color);
   border-radius: 4px;
   padding: 12px 16px;
   resize: none;
   transition: border-color 250ms var(--cubic);
-  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-form-message::placeholder {
@@ -1056,7 +1042,7 @@ svg {
   border-color: var(--accent-color);
 }
 
-/*--modal-*/
+/*--check box--*/
 
 .modal-form-checkbox-label {
   display: flex;
@@ -1094,13 +1080,14 @@ svg {
   outline: 2px solid var(--accent-color);
 }
 
-/*--chak box--*/
+/*--check box--*/
 
 .modal-form-label-link {
   position: relative;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   color: var(--accent-color);
 }
 
@@ -1109,6 +1096,7 @@ svg {
   position: absolute;
   left: 0;
   bottom: 6px;
+
   display: block;
   width: 100%;
   height: 0.1px;
@@ -1125,7 +1113,7 @@ svg {
   text-align: center;
   letter-spacing: 0.06em;
 
-  color: var(--back-color);
+  color: var(--title-text-color);
   background-color: var(--accent-color);
 
   box-shadow: var(--modal-form-btn-shadow);
@@ -1142,5 +1130,6 @@ svg {
   background-color: var(--hero-button-hover-color);
   box-shadow: var(--modal-form-btn-shadow);
 }
-/*=============End im redy start hw 7=============*/
+/*=============End Modal=============*/
+
 /*=============End Backdrop=============*/
