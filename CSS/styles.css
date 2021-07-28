@@ -145,6 +145,16 @@ svg {
 .cont {
   margin-left: auto;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
 
 /*=====================Header==================*/
 /*
@@ -1011,8 +1021,8 @@ svg {
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
-  height: 18px;
-  width: 18px;
+  height: 12px;
+  width: 12px;
   fill: var(--text-color);
   transition: fill 250ms var(--cubic);
 }
@@ -1051,13 +1061,12 @@ svg {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-
   color: var(--secondary-text-color);
   margin-bottom: 30px;
 }
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-image: url('./images/check.svg');
+  background-image: url('../img/iconcheck.svg');
   border: none;
   background-position: center;
   background-repeat: no-repeat;
@@ -1072,7 +1081,7 @@ svg {
   border: 2px solid var(--text-color);
   border-radius: 2px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 10px; 
 }
 
 .modal-form-checkbox:hover + .modal-form-checkbox-label::before,
@@ -1087,7 +1096,6 @@ svg {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
   color: var(--accent-color);
 }
 
@@ -1106,14 +1114,13 @@ svg {
 .modal-form-btn {
   display: block;
   margin: 0 auto;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
 
-  color: var(--title-text-color);
+  color: var(--widgets-link-background-color);
   background-color: var(--accent-color);
 
   box-shadow: var(--modal-form-btn-shadow);
@@ -1121,7 +1128,6 @@ svg {
   cursor: pointer;
   padding: 10px 56px;
   border: none;
-
   transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
 }
 
