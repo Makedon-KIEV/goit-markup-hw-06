@@ -952,7 +952,7 @@ svg {
 .close-vector {
   width: 11px;
   height: 11px;
-  fill: var(--back-color);
+  fill: var(--black-black);
   transition: fill 250ms var(--cubic);
 }
 
@@ -1000,6 +1000,7 @@ svg {
   padding-left: 42px;
   transition: border-color 250ms var(--cubic);
   margin-top: 4px;
+  outline: none;
 }
 
 .modal-form-input:hover,
@@ -1050,6 +1051,7 @@ svg {
 .modal-form-message:hover,
 .modal-form-message:focus {
   border-color: var(--accent-color);
+  outline: none;
 }
 
 /*--check box--*/
@@ -1086,7 +1088,7 @@ svg {
 
 .modal-form-checkbox:hover + .modal-form-checkbox-label::before,
 .modal-form-checkbox:focus + .modal-form-checkbox-label::before {
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--back-color);
 }
 
 /*--check box--*/
